@@ -1,0 +1,47 @@
+import json
+MY_DATABASE={  
+     "blockbuster":{
+         "pelicula" :{
+             "P01" :{   
+                 "id":"P01",
+                 "Nombre" : "XXXXX",
+                 "Duracion" :"xxxxxx",
+                 "sinopsis" : "XXXX",
+                 "generos" : {  
+                     "G01" :{   
+                         "id" : "G01",
+                         "Nombre" : "XXXXX"
+                     }
+                },
+                "actores" : {   
+                     "A01" :{   
+                          "id" : "A01",
+                          "Nombre" : "XXXXXX",
+                          "rol" :"Protagonista o  Antagonista o Reparto"
+                     }
+                },
+                "formato":{ 
+                     "F01":{ 
+                          "id" : "F01",
+                          "Nombre" : "DVD",
+                          "NroCopias":2,
+                          "ValorPrestamo" :5000
+                     },
+                     "F02":{    
+                          "id":"F02",
+                          "Nombre":"BlueRey",
+                          "NroCopias" : 2,
+                          "ValorPrestamo" : 8000
+                     }
+                }
+             }
+         } 
+     }
+ }
+def genero (*param):
+       
+                with open('MY_DATABASE',"w")as rwf :
+                
+                  json.dump (param[0],rwf)
+
+             
